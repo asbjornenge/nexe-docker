@@ -18,7 +18,11 @@ RUN       make install
 # INSTALL NEXE
 RUN       npm install -g nexe
 
-# CLEAN UP
+# BUILD SOMETHING (FOR FASTER BUILDS HEREAFTER)
 WORKDIR   ..
+RUN       echo "console.log('test')" > app.js && nexe -i app.js -o app.bin
+
+# CLEAN UP
+RUN       rm app.js && rm app.bin
 RUN       rm -r node-v0.10.23
 RUN       apt-get remove -y build-essential python wget
