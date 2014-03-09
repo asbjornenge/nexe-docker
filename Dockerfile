@@ -26,3 +26,5 @@ RUN       echo "console.log('test')" > app.js && nexe -i app.js -o app.bin
 RUN       rm app.js && rm app.bin
 RUN       rm -r node-v0.10.23
 RUN       apt-get remove -y build-essential python wget
+
+ENTRYPOINT ["nexe"]
