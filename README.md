@@ -4,6 +4,6 @@ Builds a [docker](http://docker.io) container for building binary [nodejs](http:
 
 Example usage:
 
-	docker run -i -t -v $(pwd):/app -w /app asbjornenge/nexe -i index.js -o app.bin
+	docker run -i -t -v $(pwd):/app -w /app asbjornenge/nexe-docker -i index.js -o app.bin
 
 enjoy.
